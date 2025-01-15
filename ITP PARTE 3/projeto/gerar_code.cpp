@@ -14,6 +14,20 @@ int main() {
         cout << sete_digitos[i] << endl; //Imprime o número gerado
     }
 
-    cout << endl; 
-}
+    cout << endl; // remover dps
 
+
+// Calcula a soma com os multiplicadores alternados entre 3 e 1
+    for (int i = 0; i < 7; i++) {
+        if (i % 2 == 0) { // Índices pares usam multiplicador 3
+            soma += 3 * sete_digitos[i];
+        } else { // Índices ímpares usam multiplicador 1
+            soma += sete_digitos[i];
+        }
+    }
+
+    // só pra saber se ta certinho (temporario)
+    cout << "Soma calculada: " << soma << endl;
+
+    return 0;
+}
